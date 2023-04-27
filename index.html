@@ -420,36 +420,37 @@
                 </div>
               </div>
             </div>
-            <!-- Shopping Swiper -->
-            <script>
-              new Swiper(".sw-shopping", {
-                slidesPerView: 8,
-                grid: {
-                  rows: 2,
-                },
-                spaceBetween: 24,
-                breakpoints: {
-                  1024: {
-                    spaceBetween: 32,
-                    slidesPerView: 3,
-                    // 화면당 3개씩 슬라이드 이동
-                    slidesPerGroup: 3,
-                    grid: {
-                      rows: 1,
-                    },
-                  },
-                  1280: {
-                    spaceBetween: 26,
-                    slidesPerView: 4,
-                    // 화면당 4개씩 슬라이드 이동
-                    slidesPerGroup: 4,
-                    grid: {
-                      rows: 1,
-                    },
-                  },
-                },
-              });
-            </script>
+<!-- Shopping Swiper -->
+<script>
+  new Swiper(".sw-shopping", {
+    slidesPerView: 5,
+    grid: {
+      rows: 2,
+      fill: "row",
+    },
+    spaceBetween: 10,
+    breakpoints: {
+      1024: {
+        spaceBetween: 32,
+        slidesPerView: 3,
+        // 화면당 3개씩 슬라이드 이동
+        slidesPerGroup: 3,
+        grid: {
+          rows: 1,
+        },
+      },
+      1280: {
+        spaceBetween: 26,
+        slidesPerView: 4,
+        // 화면당 4개씩 슬라이드 이동
+        slidesPerGroup: 4,
+        grid: {
+          rows: 1,
+        },
+      },
+    },
+  });
+</script>
           </div>
           <div class="section-bottom">
             <a href="#" class="bt-link-shop">쇼핑 홈 바로가기</a>
