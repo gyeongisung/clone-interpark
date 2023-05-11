@@ -1,14 +1,14 @@
 // html, css, js, image, font, video...
-// 사용되는 리소스가 모두 로드가 완료되고 나서
+// 사용되는 리소스가 모두 로드가 완료되고 나서 형
 // js 를 실행하여야 정상적인 처리가 가능하다.
 
 window.onload = function () {
   // 위로 이동하기
-  // .gotop을 js에 저장하자.
+  // .gotop 을 js에 저장하자.
   const goTop = document.querySelector(".gotop");
   // goTop 클릭을 처리한다.
   goTop.addEventListener("click", function () {
-    // 위로 슬라이드 코드
+    // 위로 슬라이등 코드
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -16,7 +16,6 @@ window.onload = function () {
   });
 
   // <!-- Initialize Swiper -->
-
   let promotionSwiper = new Swiper(".sw-promotion", {
     slidesPerView: 1,
     spaceBetween: 24,
@@ -50,6 +49,10 @@ window.onload = function () {
       fill: "row",
     },
     spaceBetween: 10,
+    navigation: {
+      nextEl: ".shopping .sw-next",
+      prevEl: ".shopping .sw-prev",
+    },
     breakpoints: {
       1024: {
         spaceBetween: 32,
@@ -79,6 +82,10 @@ window.onload = function () {
       fill: "row",
     },
     spaceBetween: 10,
+    navigation: {
+      nextEl: ".tour .sw-next",
+      prevEl: ".tour .sw-prev",
+    },
     breakpoints: {
       1024: {
         spaceBetween: 32,
@@ -104,6 +111,10 @@ window.onload = function () {
   let ticketSwiper = new Swiper(".sw-ticket", {
     slidesPerView: "auto",
     spaceBetween: 10,
+    navigation: {
+      nextEl: ".ticket .sw-next",
+      prevEl: ".ticket .sw-prev",
+    },
     breakpoints: {
       1024: {
         slidesPerView: 3,
@@ -119,6 +130,10 @@ window.onload = function () {
   let liveSwiper = new Swiper(".sw-live", {
     slidesPerView: 4,
     spaceBetween: 10,
+    navigation: {
+      nextEl: ".live .sw-next",
+      prevEl: ".live .sw-prev",
+    },
     breakpoints: {
       1024: {
         slidesPerView: 3,
@@ -137,6 +152,10 @@ window.onload = function () {
       fill: "row",
     },
     spaceBetween: 19,
+    navigation: {
+      nextEl: ".books .sw-next",
+      prevEl: ".books .sw-prev",
+    },
     breakpoints: {
       1024: {
         slidesPerView: 3,
@@ -160,6 +179,10 @@ window.onload = function () {
   let eventsSwiper = new Swiper(".sw-events", {
     slidesPerView: 3,
     spaceBetween: 27,
+    navigation: {
+      nextEl: ".event .sw-next",
+      prevEl: ".event .sw-prev",
+    },
     breakpoints: {
       1280: {
         slidesPerView: 4,
