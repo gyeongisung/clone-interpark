@@ -1,0 +1,8 @@
+{
+  "events_total": 4,
+  "events_1": { "link": "#", "pic": "banner1.jpg", "alt": "이벤트" },
+  "events_2": { "link": "#", "pic": "banner2.jpg", "alt": "이벤트" },
+  "events_3": { "link": "#", "pic": "banner3.jpg", "alt": "이벤트" },
+  "events_4": { "link": "#", "pic": "banner4.jpg", "alt": "이벤트" },
+  "events_5": { "link": "#", "pic": "banner3.jpg", "alt": "이벤트" }
+}
