@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
                       </div>
                       <div class="live-info">
                         <div class="live-info-top">
-                          <span class="live-info-cate">${obj.cate}</span>
+                          <span class="live-info-cate">${obj.category}</span>
                           <p class="live-info-title">${obj.title}</p>
                         </div>
                         <div class="live-info-main">
@@ -33,10 +33,10 @@ window.addEventListener("load", function () {
                         </div>
                         <div class="live-info-bottom clearfix">
                           <div class="live-info-thumb">
-                            <img src="images/${obj.pic}" alt="${obj.alt}" />
+                            <img src="images/${obj.thumbImg}" alt="${obj.thumbAlt}" />
                           </div>
                           <div class="live-info-desc">
-                            <p class="live-info-desc-title">${obj.subtitle}</p>
+                            <p class="live-info-desc-title">${obj.descTitle}</p>
                             <p class="live-info-desc-price"><em>${obj.ratio}%</em> <b>${obj.price}</b>원</p>
                           </div>
                         </div>

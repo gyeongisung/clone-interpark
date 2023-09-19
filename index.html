@@ -3,25 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
     <!-- favicon -->
     <link rel="icon" href="images/interpark.ico" />
     <!-- 바탕화면 즐겨찾기 -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" /> -->
     <!-- <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" /> -->
     <link rel="manifest" href="images/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
     <title>인터파크</title>
 
     <!-- SEO 적용 -->
-    <meta name="description" content="국내외 항공권, 숙소, 여행 최저가 예약부터 뮤지컬, 콘서트, 연극 티켓까지 모두 한번에 예약하세요" />
-    <meta name="keywords" content="항공권,호텔,리조트,펜션,숙박,비행기표,비행기예약,패키지여행,호텔예약,최저가,뮤지컬,연극,콘서트,티켓,여행,전시,레저,티켓팅" />
+    <meta
+      name="description"
+      content="국내외 항공권, 숙소, 여행 최저가 예약부터 뮤지컬, 콘서트, 연극 티켓까지 모두 한번에 예약하세요"
+    />
+    <meta
+      name="keywords"
+      content="항공권,호텔,리조트,펜션,숙박,비행기표,비행기예약,패키지여행,호텔예약,최저가,뮤지컬,연극,콘서트,티켓,여행,전시,레저,티켓팅"
+    />
     <meta property="og:title" content="인터파크" />
-    <meta property="og:description" content="항공권,호텔,리조트,펜션,숙박,비행기표,비행기예약,패키지여행,호텔예약,최저가,뮤지컬,연극,콘서트,티켓,여행,전시,레저,티켓팅" />
+    <meta
+      property="og:description"
+      content="항공권,호텔,리조트,펜션,숙박,비행기표,비행기예약,패키지여행,호텔예약,최저가,뮤지컬,연극,콘서트,티켓,여행,전시,레저,티켓팅"
+    />
     <meta property="og:image" content="" />
     <meta property="og:url" content="https://www.interpark.com" />
     <meta property="og:site_name" content="인터파크" />
@@ -37,13 +57,18 @@
     <script src="js/prefixfree.min.js"></script>
     <!-- response -->
     <script src="js/respond.min.js"></script>
-
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- css 초기화 파일 적용 -->
+    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- js 파일 로딩 -->
     <script src="js/index.js"></script>
@@ -53,8 +78,36 @@
     <script src="js/live.js"></script>
     <script src="js/books.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/modal.js"></script>
   </head>
   <body>
+    <!-- 클론코드 안내창 -->
+    <div class="modal">
+      <div class="modal-cont">
+        <span class="cont-title">클론코드 안내사항</span>
+        <div class="cont-text">
+          <span>
+            해당 사이트는 학습용 포트폴리오로<br />
+            개발이 되었으므로 정식 사이트 Any-Chem과<br />
+            아무련 관련이 없음을 알려드립니다.
+          </span>
+          <div class="cont-img-wrap">
+            <p>
+              <a href="https://github.com/gyeongisung/clone-anychem"
+                ><img class="cont-img" src="images/github.svg" alt="git"
+              /></a>
+            </p>
+            <p>
+              <a
+                href="https://www.notion.so/Team-Project-NCT-7e83314d30864f06af0fc2e14d46844c?pvs=4"
+                ><img class="cont-img" src="images/notion.svg" alt="notion"
+              /></a>
+            </p>
+          </div>
+          <button class="cont-btn">확인</button>
+        </div>
+      </div>
+    </div>
     <!-- 플라잉 배너 -->
     <div class="fix-banner">
       <a href="#"><img src="images/wingBanner.png" alt="배너" /></a>
@@ -77,16 +130,24 @@
           <h2 class="fix-mypage-title">마이페이지를 선택해주세요.</h2>
           <ul class="fix-mypage-list clearfix">
             <li>
-              <a href="#"><img src="images/icon_tour.png" alt="투어" />투어 MY</a>
+              <a href="#"
+                ><img src="images/icon_tour.png" alt="투어" />투어 MY</a
+              >
             </li>
             <li>
-              <a href="#"><img src="images/icon_ticket.png" alt="티켓" />티켓 MY</a>
+              <a href="#"
+                ><img src="images/icon_ticket.png" alt="티켓" />티켓 MY</a
+              >
             </li>
             <li>
-              <a href="#"><img src="images/icon_shopping.png" alt="쇼핑" />쇼핑 MY</a>
+              <a href="#"
+                ><img src="images/icon_shopping.png" alt="쇼핑" />쇼핑 MY</a
+              >
             </li>
             <li>
-              <a href="#"><img src="images/icon_book.png" alt="도서" />도서 MY</a>
+              <a href="#"
+                ><img src="images/icon_book.png" alt="도서" />도서 MY</a
+              >
             </li>
           </ul>
         </div>
@@ -101,7 +162,12 @@
             <div class="header-left">
               <a href="index.html" alt="인터파크" class="logo"></a>
               <form class="search">
-                <input type="text" class="search-text" maxlength="255" placeholder="검색어를 입력해주세요." />
+                <input
+                  type="text"
+                  class="search-text"
+                  maxlength="255"
+                  placeholder="검색어를 입력해주세요."
+                />
                 <input type="button" class="search-bt" />
                 <input type="reset" class="search-reset" />
               </form>
@@ -139,22 +205,34 @@
           <div class="header-down clearfix">
             <ul class="service-list clearfix">
               <li>
-                <a href="#"><img src="images/icon_tour.png" alt="투어" />투어</a>
+                <a href="#"
+                  ><img src="images/icon_tour.png" alt="투어" />투어</a
+                >
               </li>
               <li>
-                <a href="#"><img src="images/icon_ticket.png" alt="티켓" />티켓</a>
+                <a href="#"
+                  ><img src="images/icon_ticket.png" alt="티켓" />티켓</a
+                >
               </li>
               <li>
-                <a href="#"><img src="images/icon_shopping.png" alt="쇼핑" />쇼핑</a>
+                <a href="#"
+                  ><img src="images/icon_shopping.png" alt="쇼핑" />쇼핑</a
+                >
               </li>
               <li>
-                <a href="#"><img src="images/icon_book.png" alt="도서" />도서</a>
+                <a href="#"
+                  ><img src="images/icon_book.png" alt="도서" />도서</a
+                >
               </li>
               <li>
-                <a href="#"><img src="images/icon_triple.png" alt="트리플" />트리플</a>
+                <a href="#"
+                  ><img src="images/icon_triple.png" alt="트리플" />트리플</a
+                >
               </li>
               <li>
-                <a href="#"> <img src="images/icon_nol.png" alt="NOL혜택" />NOL혜택</a>
+                <a href="#">
+                  <img src="images/icon_nol.png" alt="NOL혜택" />NOL혜택</a
+                >
               </li>
             </ul>
 
@@ -312,10 +390,10 @@
             <h2>오늘의 도서</h2>
             <p>지금 읽기 딱 좋은 책, 놓치지 마세요!</p>
             <div class="btns">
-              <a href="#">MD's Pick</a>
+              <!-- <a href="#">MD's Pick</a>
               <a href="#">베스트셀러</a>
               <a href="#">신간추천</a>
-              <a href="#">특가할인</a>
+              <a href="#">특가할인</a> -->
             </div>
           </div>
           <div class="section-slide">
@@ -406,15 +484,23 @@
 
               <ul class="company-info">
                 <li>
-                  <span class="f-line">서울시 강남구 삼성로 512 삼성동빌딩 10층</span>
+                  <span class="f-line"
+                    >서울시 강남구 삼성로 512 삼성동빌딩 10층</span
+                  >
                   <span class="f-line">호스팅서비스제공자 (주)인터파크</span>
                   대표이사 최휘영<br />
-                  <span class="f-line">사업자등록번호 824-81-02515 <a href="#" class="line">사업자정보확인</a></span>
+                  <span class="f-line"
+                    >사업자등록번호 824-81-02515
+                    <a href="#" class="line">사업자정보확인</a></span
+                  >
                   <span>통신판매업신고 2022-서울강남-02179</span><br />
                   <span>관광사업증 등록번호 : 제2014-42호</span>
                 </li>
                 <li>
-                  <span class="f-line"><b>고객센터</b> <a href="#" class="line">투어1:1문의</a></span>
+                  <span class="f-line"
+                    ><b>고객센터</b>
+                    <a href="#" class="line">투어1:1문의</a></span
+                  >
                   <span><a href="#" class="line">티켓1:1문의</a></span> <br />
                   <span class="f-line">투어 1588-3443</span>
                   <span class="f-line">티켓 1544-1555</span>
@@ -429,12 +515,23 @@
                   <span class="f-line">투어 1588-3443</span>
                   <span class="f-line">티켓 1544-1555</span>
                   <span>팩스 02-6924-9001</span> <br />
-                  <span class="f-line">이메일 <a href="#">intersolution@interpark.com</a></span>
-                  <span>개인정보보호책임자 <a href="#">cpo@interpark.com</a></span>
+                  <span class="f-line"
+                    >이메일 <a href="#">intersolution@interpark.com</a></span
+                  >
+                  <span
+                    >개인정보보호책임자 <a href="#">cpo@interpark.com</a></span
+                  >
                 </li>
                 <li>
-                  <p>(주)인터파크는 인터파크티켓, 인터파크투어의 통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크는 일체 책임을 지지 않습니다.</p>
-                  <span class="copy">Copyright ⓒ INTERPARK Co.,Ltd. All Rights Reserved.</span>
+                  <p>
+                    (주)인터파크는 인터파크티켓, 인터파크투어의
+                    통신판매중개자로서 통신판매의 당사자가 아니므로, 개별
+                    판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크는
+                    일체 책임을 지지 않습니다.
+                  </p>
+                  <span class="copy"
+                    >Copyright ⓒ INTERPARK Co.,Ltd. All Rights Reserved.</span
+                  >
                 </li>
               </ul>
             </div>
@@ -442,14 +539,23 @@
               <p class="company-name">(주)인터파크커머스</p>
               <ul class="company-info">
                 <li>
-                  <span>서울시 서초구 강남대로 447(서초동, 남서울빌딩)</span><br />
-                  <span class="f-line">호스팅서비스제공자 (주)인터파크커머스</span>
+                  <span>서울시 서초구 강남대로 447(서초동, 남서울빌딩)</span
+                  ><br />
+                  <span class="f-line"
+                    >호스팅서비스제공자 (주)인터파크커머스</span
+                  >
                   <span>대표이사 김양선</span><br />
-                  <span class="f-line">사업자 등록번호 : 422-81-03185 <a href="#" class="line">사업자정보확인</a></span>
+                  <span class="f-line"
+                    >사업자 등록번호 : 422-81-03185
+                    <a href="#" class="line">사업자정보확인</a></span
+                  >
                   <span>통신판매업신고 2023-서울서초-0823</span>
                 </li>
                 <li>
-                  <span class="f-line"><b>고객센터</b> <a href="#" class="line">쇼핑1:1문의</a></span>
+                  <span class="f-line"
+                    ><b>고객센터</b>
+                    <a href="#" class="line">쇼핑1:1문의</a></span
+                  >
                   <span><a href="#" class="line">도서1:1문의</a></span> <br />
                   <span class="f-line">쇼핑 1588-1005</span>
                   <span class="f-line">도서 1577-2555</span>
@@ -462,12 +568,24 @@
                   <span class="f-line">쇼핑 1588-3443</span>
                   <span class="f-line">도서 1544-1555</span>
                   <span>팩스 02-6924-9001</span> <br />
-                  <span class="f-line">이메일 <a href="#">intersolution@interpark.com</a></span>
-                  <span>개인정보보호책임자 <a href="#">cpo@interpark.com</a></span>
+                  <span class="f-line"
+                    >이메일 <a href="#">intersolution@interpark.com</a></span
+                  >
+                  <span
+                    >개인정보보호책임자 <a href="#">cpo@interpark.com</a></span
+                  >
                 </li>
                 <li>
-                  <p>(주)인터파크커머스는 인터파크쇼핑, 인터파크도서의 통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크커머스는 일체 책임을 지지 않습니다.</p>
-                  <span class="copy">Copyright ⓒ INTERPARKCormmerce Co.,Ltd. All Rights Reserved.</span>
+                  <p>
+                    (주)인터파크커머스는 인터파크쇼핑, 인터파크도서의
+                    통신판매중개자로서 통신판매의 당사자가 아니므로, 개별
+                    판매자가 등록한 오픈마켓 상품에 대해서 주식회사
+                    인터파크커머스는 일체 책임을 지지 않습니다.
+                  </p>
+                  <span class="copy"
+                    >Copyright ⓒ INTERPARKCormmerce Co.,Ltd. All Rights
+                    Reserved.</span
+                  >
                 </li>
               </ul>
             </div>
@@ -488,10 +606,22 @@
               <a href="#" class="a-more">공지사항</a>
             </div>
             <div class="footer-mobile-info">
-              <a href="#" class="a-line a-more"><strong>(주)인터파크</strong> 사업자정보</a>
-              <a href="#" class="a-more"><strong>(주)인터파크커머스</strong> 사업자정보</a>
+              <a href="#" class="a-line a-more"
+                ><strong>(주)인터파크</strong> 사업자정보</a
+              >
+              <a href="#" class="a-more"
+                ><strong>(주)인터파크커머스</strong> 사업자정보</a
+              >
             </div>
-            <div class="footer-mobile-desc">(주)인터파크는 인터파크티켓, 인터파크투어의 통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크는 일체 책임을 지지 않습니다. (주)인터파크커머스는 인터파크쇼핑, 인터파크도서의 통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에 대해서 주식회사 인터파크커머스는 일체 책임을 지지 않습니다.</div>
+            <div class="footer-mobile-desc">
+              (주)인터파크는 인터파크티켓, 인터파크투어의 통신판매중개자로서
+              통신판매의 당사자가 아니므로, 개별 판매자가 등록한 오픈마켓 상품에
+              대해서 주식회사 인터파크는 일체 책임을 지지 않습니다.
+              (주)인터파크커머스는 인터파크쇼핑, 인터파크도서의
+              통신판매중개자로서 통신판매의 당사자가 아니므로, 개별 판매자가
+              등록한 오픈마켓 상품에 대해서 주식회사 인터파크커머스는 일체
+              책임을 지지 않습니다.
+            </div>
           </div>
         </div>
       </footer>

@@ -10,29 +10,41 @@ window.addEventListener("load", function () {
   // <!-- Shopping Swiper -->
   // 메뉴를 실행시에 쇼핑 목록  slide 내용 변경
   function parseShopping(_menu) {
-    let xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function (event) {
-      let req = event.target;
-      if (req.readyState === XMLHttpRequest.DONE) {
-        let data = JSON.parse(req.response);
-        makeShoppingSlide(data);
-      }
-    };
+    // let xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function (event) {
+    //   let req = event.target;
+    //   if (req.readyState === XMLHttpRequest.DONE) {
+    //     let data = JSON.parse(req.response);
+    //     makeShoppingSlide(data);
+    //   }
+    // };
 
     // 전달된 매개변수 _menu 에 따라서
     // 관련된 json 데이터를 불러들이고,
     if (_menu === "쎈딜") {
-      xhr.open("GET", "data/shoppingdata.json");
+      fetch("data/shoppingdata.json")
+        .then((res) => res.json())
+        .then((result) => makeShoppingSlide(result))
+        .catch((err) => console.log(err));
     } else if (_menu === "베스트") {
-      xhr.open("GET", "data/shoppingdata1.json");
+      fetch("data/shoppingdata1.json")
+        .then((res) => res.json())
+        .then((result) => makeShoppingSlide(result));
     } else if (_menu === "오늘만특가") {
-      xhr.open("GET", "data/shoppingdata2.json");
+      fetch("data/shoppingdata2.json")
+        .then((res) => res.json())
+        .then((result) => makeShoppingSlide(result))
+        .catch((err) => console.log(err));
     } else if (_menu === "어린이날") {
-      xhr.open("GET", "data/shoppingdata3.json");
-    } else if (_menu === "소담상회") {
-      xhr.open("GET", "data/shoppingdata4.json");
+      fetch("data/shoppingdata3.json")
+        .then((res) => res.json())
+        .then((result) => makeShoppingSlide(result))
+        .catch((err) => console.log(err));
+      fetch("data/shoppingdata4.json")
+        .then((res) => res.json())
+        .then((result) => makeShoppingSlide(result))
+        .catch((err) => console.log(err));
     }
-    xhr.send();
 
     // html 을 만들어서
     // slide 를 만들어준다.
@@ -65,7 +77,9 @@ window.addEventListener("load", function () {
       swShoppingHtml += temp;
     }
 
-    let swShoppingWrapper = document.querySelector(".sw-shopping .swiper-wrapper");
+    let swShoppingWrapper = document.querySelector(
+      ".sw-shopping .swiper-wrapper"
+    );
     swShoppingWrapper.innerHTML = swShoppingHtml;
 
     // 새로 생성전에 swiper API를 이용해서 삭제한다.
@@ -110,25 +124,32 @@ window.addEventListener("load", function () {
   // 대상이 여러개이면 querySelectorAll
   // a태그가 4개이므로 querySelectorAll
   const btns = this.document.querySelectorAll(".shopping .btns a");
-  btns[0].onclick = function (event) {
-    event.preventDefault();
-    parseShopping("쎈딜");
-  };
-  btns[1].onclick = function (event) {
-    // a태그의 기본 동작인 href를 막는다.
-    event.preventDefault();
-    parseShopping("베스트");
-  };
-  btns[2].onclick = function (event) {
-    event.preventDefault();
-    parseShopping("오늘만특가");
-  };
-  btns[3].onclick = function (event) {
-    event.preventDefault();
-    parseShopping("어린이날");
-  };
-  btns[4].onclick = function (event) {
-    event.preventDefault();
-    parseShopping("소담상회");
-  };
+  let cateName = ["쎈딜", "베스트", "오늘만특가", "어린이날"];
+  for (let i = 0; i < cateName.length; i++) {
+    btns[i].onclick = function (event) {
+      event.preventDefault();
+      parseShopping(cateName[i]);
+      // 좋은 방법 없을 까? 고민해 보자.
+      for (let j = 0; j < btns.length; j++) {
+        btns[j].classList.remove("btns-active");
+      }
+      // 포커스 적용
+      this.classList.add("btns-active");
+    };
+  }
+
+  // btns[1].onclick = function (event) {
+  //   // a태그의 기본 동작인 href를 막는다.
+  //   event.preventDefault();
+  //   parseShopping("베스트");
+  // };
+  // btns[2].onclick = function (event) {
+  //   event.preventDefault();
+  //   parseShopping("오늘만특가");
+  // };
+  // btns[3].onclick = function (event) {
+  //   event.preventDefault();
+  //   parseShopping("어린이날");
+  // };
+  // btns[4].onclick = function (event) {};
 });
